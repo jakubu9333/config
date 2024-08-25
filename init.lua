@@ -795,6 +795,12 @@ require("lazy").setup({
 	--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
 	-- { import = 'custom.plugins' },
 	{
+    "tpope/vim-fugitive",
+    config = function ( )
+        vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+      end,
+  },
+	{
 		"kyazdani42/nvim-tree.lua",
 		config = function()
 			require("nvim-tree").setup({
