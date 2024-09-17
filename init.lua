@@ -27,7 +27,6 @@ vim.opt.showmode = false
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.opt.clipboard = "unnamedplus"
 
 -- Enable break indent
 vim.opt.breakindent = true
@@ -795,11 +794,11 @@ require("lazy").setup({
 	--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
 	-- { import = 'custom.plugins' },
 	{
-    "tpope/vim-fugitive",
-    config = function ( )
-        vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
-      end,
-  },
+		"tpope/vim-fugitive",
+		config = function()
+			vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+		end,
+	},
 	{
 		"kyazdani42/nvim-tree.lua",
 		config = function()
